@@ -9,11 +9,11 @@ angular.module('contextcommentsApp')
 
 	        	templateUrl: 'app/article/article.html',
         		controller: function() {}
-	    },
+	     },
 
         	"content@article": { 
-        		templateUrl: "app/article/content/content.html  ",
-        		controller: 'ContentContrl'
+        		templateUrl: "app/article/content/content.html",
+        		controller: 'contentCtrl'
         },
         	"comment@article": { 
         		templateUrl: "app/article/comment/comment.html",
