@@ -9,8 +9,8 @@ angular.module('contextcommentsApp')
           templateUrl: 'app/article/article.html',
           controller: function() {}
         },
-        "content@article": { 
-        	templateUrl: "app/article/content/content.html",
+        'content@article': { 
+        	templateUrl: 'app/article/content/content.html',
           controller: 'ContentContrl'
         },
       	'comment@article': { 
@@ -19,5 +19,5 @@ angular.module('contextcommentsApp')
         }
       }
       // templateUrl: 'app/article/article.html',
-    })
+    });
   });

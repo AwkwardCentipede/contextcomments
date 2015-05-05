@@ -3,25 +3,23 @@
 console.log('here');
 
 angular.module('contextcommentsApp')
-  .config(function ($stateProvider) {
-    $stateProvider
-      .state('comment', {
-        url: '/comment',
-        views: {
-
-          '':{
-            templateUrl: 'app/article/comment/comment.html',
-            controller: function() {}
-      },
-          'commentEntry@comment': { 
-            templateUrl: 'app/article/comment/commentEntry/comment.html',
-            controller: 'CommentEntryCtrl'
-          }
-        },
-        // templateUrl: 'app/article/article.html',
-      })
-  })
   .controller('CommentBoxCtrl', function ($scope, $http) {
-    $scope.entries = [{name : 'Dave', value: 'a'},{name : 'Dave2', value: 'a2'}
+    $scope.boxes = [
+      {
+        name: 'Comment Box 1', 
+        value: 'A', 
+        entries: [
+          {user: 'John', comment: 'Hello, World!'}, 
+          {user: 'Jane', comment: 'Hello, John!'}
+        ]
+      },
+      {
+        name: 'Comment Box 2', 
+        value: 'B',
+        entries: [
+          {user: 'John', comment: 'Jane you are not the world.'}, 
+          {user: 'Jane', comment: 'How do you know?'}
+        ]
+      }
     ];
   });
