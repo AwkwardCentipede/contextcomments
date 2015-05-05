@@ -1,11 +1,9 @@
 <div>inside comment.html
-
-<div class="panel panel-default"
-      ng-repeat="comment in entries">
-      <div class="Name">{{ comment.name }}</div>
-      <div class="Value">{{ comment.value }}</div>
-
-</div>
+  <div class="panel panel-default" ng-repeat="comment in entries">
+     <div ui-view="commentEntry"></div>
+    <div class="Name">{{ comment.name }}</div>
+    <div class="Value">{{ comment.value }}</div>
+  </div>
 </div>
 
 
