@@ -1,12 +1,33 @@
-<div>inside comment.html
-  <div class="panel panel-default" ng-repeat="box in boxes">
-    <div class="Name">{{ box.name }}</div>
-    <!-- <div ui-view="commentEntry"></div> -->
-    <div class="" ng-repeat="entry in box.entries">
-      <div class="Entry">User: {{ entry.user }} Comment: {{ entry.comment }}</div>
+<!-- div for the entire right panel -->
+<div id="commentPanel" class="bs-docs-sidebar affix-top">
+
+  <!-- comment box -->
+  <div class="panel" ng-repeat="box in boxes">
+    <!-- string of text associated with the comment box -->
+    <div class="commentedText">{{ box.commentedText }}</div>
+    <!-- entries in the comment box -->
+    <div class="panel" ng-repeat="entry in box.entries">
+      <div class="Entry">
+        <div class="commenterImage">
+          User: {{ entry.username }} 
+        </div>
+        <div class="commentText">
+          <p class="">Comment: {{ entry.comment }}</p>
+          <span class="date sub-text">[DATE]</span>
+        </div>
+      </div>
     </div>
-    <div class="Value">{{ box.value }}</div>
+
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Your comments" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-default">Add</button>
+      </div>
+    </form>
   </div>
+
 </div>
 
 
